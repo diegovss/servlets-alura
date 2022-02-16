@@ -45,7 +45,7 @@ public class EmpresasService extends HttpServlet {
 			
 			response.setContentType("application/xml");
 			response.getWriter().print(xml);
-		}else if(valor.endsWith("json")) {
+		}else if(valor.contains("json")) {
 			Gson gson = new Gson();
 			String json = gson.toJson(empresas);
 			
